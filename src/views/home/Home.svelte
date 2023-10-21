@@ -3,7 +3,7 @@
 	import Field from "./Field.svelte";
 </script>
 
-<div class="d-flex flex-column w-100 h-100">
+<div class="d-flex flex-column w-100 h-100 p-5">
 	<h4 class="p-3">MEMBER CENTER | 會員資訊</h4>
 	<div class="d-flex flex-column flex-fill w-100 overflow">
 		<div class="mt-3 p-3 mx-3 mx-sm-0 bg-black text-white">基本資料</div>

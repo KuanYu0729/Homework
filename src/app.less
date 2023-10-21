@@ -1,8 +1,15 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
+
 input {
   outline: none;
 }
 
 .flex-fill {
-  flex-basis: 0%;
+  flex-basis: 0% !important;
+}
+
+@media (min-width:576px) {
+  .flex-sm-fill {
+    flex-basis: 0% !important;
+  }
 }

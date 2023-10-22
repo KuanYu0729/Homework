@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Arrow from "../../component/icon/Arrow.svelte";
+
 	export let seq: string = "";
 	export let date: string = "";
 	export let status: string = "";
@@ -42,7 +44,10 @@
 			<td class="p-3">{status}</td>
 			<td class="p-3">{price}</td>
 			<td class="p-3">
-				<button type="button" class="btn btn-secondary" on:click={onClick}> 商品明細 </button>
+				<button type="button" class="btn btn-secondary d-flex flex-row justify-content-start align-items-center {isExpand ? 'active' : ''}" on:click={onClick}>
+					<span class="me-2">商品明細</span>
+					<Arrow color="#ffffff" />
+				</button>
 			</td>
 		</tr>
 		<tr>
@@ -93,5 +98,15 @@
 		overflow: hidden;
 		max-height: 0px;
 		transition: max-height 0.2s ease-out;
+	}
+	.btn {
+		:global(svg) {
+			transition: transform 0.2s ease-out;
+		}
+		&.active {
+			:global(svg) {
+				transform: rotate(180deg);
+			}
+		}
 	}
 </style>

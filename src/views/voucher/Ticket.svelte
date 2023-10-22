@@ -1,6 +1,6 @@
 
-<div class="d-flex flex-row justify-content-start align-items-center border border-1 p-3">
-	<div class="d-flex flex-column border-end border-top-0 border-start-0 border-bottom-0 p-5" style="border-style: dotted;">
+<div class="d-flex flex-row justify-content-start align-items-center border border-1 p-1 p-sm-3">
+	<div class="d-flex flex-column border-end border-top-0 border-start-0 border-bottom-0 p-3 p-sm-5" style="border-style: dotted;">
 		<div class="d-flex flex-row justify-content-start align-items-center">
 			夏日歡慶
 		</div>

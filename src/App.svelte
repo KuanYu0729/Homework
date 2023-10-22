@@ -1,7 +1,8 @@
 <script lang="ts">
   import Home from "./views/home/Home.svelte";
   import OrderRecord from "./views/order/OrderRecord.svelte";
-    import Voucher from "./views/voucher/Voucher.svelte";
+  import Voucher from "./views/voucher/Voucher.svelte";
+    import WishList from "./views/wishlist/WishList.svelte";
   let page: string | undefined;
   function onClick(_: string) {
     page = _;
@@ -18,11 +19,14 @@
   {:else if page === "voucher"}
     <!-- 優惠卷 -->
     <Voucher />
+  {:else if page === "wishlist"}
+    <!-- 優惠卷 -->
+    <WishList/>
   {:else}
-    <div class="d-flex flex-row justify-content-around align-items-center">
+    <div class="row mx-auto py-2">
       <button
         type="button"
-        class="btn btn-primary"
+        class="btn btn-primary col-3 mx-2 mt-2"
         on:click={() => {
           onClick("home");
         }}
@@ -31,7 +35,7 @@
       </button>
       <button
         type="button"
-        class="btn btn-primary"
+        class="btn btn-primary col-3 mx-2 mt-2"
         on:click={() => {
           onClick("order");
         }}
@@ -40,19 +44,22 @@
       </button>
       <button
         type="button"
-        class="btn btn-primary"
+        class="btn btn-primary col-3 mx-2 mt-2"
         on:click={() => {
           onClick("voucher");
         }}
       >
         優惠卷
       </button>
+      <button
+        type="button"
+        class="btn btn-primary col-3 mx-2 mt-2"
+        on:click={() => {
+          onClick("wishlist");
+        }}
+      >
+        我的最愛
+      </button>
     </div>
   {/if}
 </div>
-
-<style lang="less">
-  .btn {
-    width: 100px;
-  }
-</style>
